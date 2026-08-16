@@ -31,7 +31,27 @@
         <p>This page previews the admin workflow. It currently reads submissions saved on this device. The production version will read from Supabase.</p>
       </section>
 
-      <section class="section">
+      <section class="section dashboard-grid">
+        <article class="content-card metric-card">
+          <span data-admin-total>0</span>
+          <p>Total local signups</p>
+        </article>
+        <article class="content-card metric-card">
+          <span data-admin-latest>0</span>
+          <p>Latest signup age in days</p>
+        </article>
+        <article class="content-card metric-card">
+          <span data-admin-source>Local</span>
+          <p>Current data source</p>
+        </article>
+      </section>
+
+      <section class="section progress-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Waitlist entries</p>
+          <h2>Local preview records.</h2>
+        </div>
+        <p class="admin-status" data-admin-status>Admin preview reads this browser only.</p>
         <div class="table-wrap">
           <table class="data-table">
             <thead>
@@ -46,15 +66,17 @@
           </table>
         </div>
         <div class="dashboard-actions">
-          <button class="primary-button" type="button" data-clear-waitlist>Clear local entries</button>
+          <button class="primary-button" type="button" data-export-waitlist>Export CSV</button>
+          <button class="secondary-button" type="button" data-clear-waitlist>Clear local entries</button>
           <a class="secondary-button" href="./contact.html">Add test signup</a>
+          <a class="secondary-button" href="./database-setup.html">Connect database</a>
         </div>
       </section>
     </main>
 
     <footer class="footer">
       <p>© 2026 LabiPilot.</p>
-      <div><a href="./courses.html">Courses</a><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a><a href="./contact.html">Contact</a></div>
+      <div><a href="./courses.html">Courses</a><a href="./resources.html">Resources</a><a href="./database-setup.html">Database setup</a><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a><a href="./contact.html">Contact</a></div>
     </footer>
     <script src="./script.js"></script>
   </body>

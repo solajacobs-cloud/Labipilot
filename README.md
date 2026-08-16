@@ -9,18 +9,16 @@ Live site: https://labipilot-lake.vercel.app
 1. Public landing page
 2. Course, lesson, project, resource, about, and contact pages
 3. Learner dashboard preview
-4. First lesson page with local progress tracking
-5. Second lesson page with local progress tracking
-6. Third lesson page with generated code review guidance
-7. Fourth lesson page with data, forms, and access rule planning
-8. Toolkit page with copy ready prompts
-9. Interactive learning tracks
-10. Project labs and outcomes
-11. Local waitlist preview using browser storage
-12. Admin preview page at `/admin`
-13. Privacy and terms pages
-14. Supabase waitlist schema in `supabase-schema.sql`
-15. SEO metadata, robots file, sitemap, and social preview image
+4. Five lesson launch path with local progress tracking
+5. Copy ready lesson prompts for briefs, interface planning, code review, data planning, and deployment verification
+6. Toolkit page with copy ready prompts
+7. Interactive learning tracks
+8. Project labs and outcomes
+9. Local waitlist preview using browser storage
+10. Admin preview page at `/admin`
+11. Privacy and terms pages
+12. Supabase waitlist schema in `supabase-schema.sql`
+13. SEO metadata, robots file, sitemap, and social preview image
 
 ## Deploying to Vercel
 

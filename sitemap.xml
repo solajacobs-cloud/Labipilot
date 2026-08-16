@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://labipilot.vercel.app/</loc>
+    <loc>https://labipilot-lake.vercel.app/</loc>
     <lastmod>2026-08-16</lastmod>
     <priority>1.0</priority>
   </url>
-  <url><loc>https://labipilot.vercel.app/courses</loc><lastmod>2026-08-16</lastmod><priority>0.8</priority></url>
-  <url><loc>https://labipilot.vercel.app/lessons</loc><lastmod>2026-08-16</lastmod><priority>0.8</priority></url>
-  <url><loc>https://labipilot.vercel.app/projects</loc><lastmod>2026-08-16</lastmod><priority>0.8</priority></url>
-  <url><loc>https://labipilot.vercel.app/resources</loc><lastmod>2026-08-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://labipilot.vercel.app/about</loc><lastmod>2026-08-16</lastmod><priority>0.7</priority></url>
-  <url><loc>https://labipilot.vercel.app/contact</loc><lastmod>2026-08-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://labipilot-lake.vercel.app/courses</loc><lastmod>2026-08-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://labipilot-lake.vercel.app/lessons</loc><lastmod>2026-08-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://labipilot-lake.vercel.app/projects</loc><lastmod>2026-08-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://labipilot-lake.vercel.app/resources</loc><lastmod>2026-08-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://labipilot-lake.vercel.app/about</loc><lastmod>2026-08-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://labipilot-lake.vercel.app/contact</loc><lastmod>2026-08-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://labipilot-lake.vercel.app/admin</loc><lastmod>2026-08-16</lastmod><priority>0.3</priority></url>
 </urlset>

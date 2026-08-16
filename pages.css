@@ -126,16 +126,93 @@
   margin-top: 18px;
 }
 
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.metric-card {
+  display: grid;
+  gap: 10px;
+}
+
+.metric-card span {
+  color: var(--accent);
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.progress-panel {
+  padding-top: 0;
+}
+
+.progress-list {
+  display: grid;
+  gap: 14px;
+}
+
+.progress-item {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  padding: 22px;
+}
+
+.progress-item > span {
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.progress-item.done {
+  border-color: rgba(15, 159, 110, 0.45);
+  background: #f1fbf7;
+}
+
+.progress-item h3,
+.progress-item p {
+  margin-bottom: 12px;
+}
+
+.lesson-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.lesson-copy {
+  display: grid;
+  gap: 20px;
+}
+
+.prompt-card pre {
+  overflow-x: auto;
+  margin: 18px 0 0;
+  border-radius: 8px;
+  background: #0b1220;
+  color: #dce7ff;
+  padding: 18px;
+  line-height: 1.65;
+}
+
 @media (max-width: 900px) {
   .content-grid,
   .content-grid.two,
-  .contact-panel {
+  .contact-panel,
+  .dashboard-grid,
+  .lesson-layout {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 520px) {
-  .lesson-item {
+  .lesson-item,
+  .progress-item {
     grid-template-columns: 1fr;
   }
 }

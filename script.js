@@ -66,12 +66,19 @@ tabs.forEach((tab) => {
   });
 });
 
-menuButton.addEventListener("click", () => {
-  nav.classList.toggle("open");
-});
+if (menuButton && nav) {
+  menuButton.addEventListener("click", () => {
+    nav.classList.toggle("open");
+  });
+}
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  form.querySelector(".form-note").textContent =
-    "Thank you. Connect this form to Supabase when you want to collect real signups.";
-});
+if (form) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const note = form.querySelector(".form-note");
+    if (note) {
+      note.textContent =
+        "Thank you. Connect this form to Supabase when you want to collect real signups.";
+    }
+  });
+}

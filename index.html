@@ -1,1 +1,299 @@
-PLACEHOLDER
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LabiPilot helps builders learn AI engineering through verification, systems thinking, shipping practice, and practical project labs."
+    />
+    <meta
+      name="keywords"
+      content="LabiPilot, AI engineering, AI coding, prompt engineering, Vercel, systems thinking, software learning"
+    />
+    <meta name="author" content="LabiPilot" />
+    <meta property="og:title" content="LabiPilot, Engineering AI With Judgment" />
+    <meta
+      property="og:description"
+      content="Learn to build, verify, and ship AI powered products with structured labs and practical engineering judgment."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/social-preview.svg" />
+    <meta name="theme-color" content="#111827" />
+    <title>LabiPilot, Engineering AI With Judgment</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "LabiPilot",
+        "description": "AI engineering learning platform for practical builders.",
+        "url": "https://labipilot.vercel.app",
+        "sameAs": []
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="LabiPilot home">
+        <span class="brand-mark">LP</span>
+        <span>LabiPilot</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#method">Method</a>
+        <a href="#tracks">Tracks</a>
+        <a href="#labs">Labs</a>
+        <a href="#outcomes">Outcomes</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <a class="header-cta" href="#join">Join waitlist</a>
+      <button class="menu-button" type="button" aria-label="Open menu">Menu</button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">AI engineering school for practical builders</p>
+          <h1>Build with AI. Think like an engineer.</h1>
+          <p class="hero-copy">
+            LabiPilot teaches the judgement behind reliable AI products, from verification and system design to shipping real apps on modern cloud platforms.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#tracks">Explore tracks</a>
+            <a class="secondary-button" href="#method">See the method</a>
+          </div>
+          <div class="hero-stats" aria-label="LabiPilot programme highlights">
+            <span><strong>4</strong> project labs</span>
+            <span><strong>3</strong> core tracks</span>
+            <span><strong>1</strong> launch path</span>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="LabiPilot learning preview">
+          <div class="terminal-top">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="terminal-body">
+            <p><strong>labipilot verify</strong></p>
+            <p class="muted">Checking product flow...</p>
+            <p class="success">UI loaded, API passed, data saved.</p>
+            <p class="muted">Next lesson unlocked.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro" id="method">
+        <div>
+          <p class="eyebrow">The LabiPilot method</p>
+          <h2>Less guessing. More proof.</h2>
+        </div>
+        <p>
+          Every lesson turns AI output into engineering decisions. You learn how to ask better questions, inspect code, test flows, fix weak logic, and prepare work for deployment.
+        </p>
+      </section>
+
+      <section class="workflow" aria-label="LabiPilot workflow">
+        <div class="workflow-step">
+          <span>Brief</span>
+          <p>Define the product idea, user goal, page structure, data needs, and success criteria.</p>
+        </div>
+        <div class="workflow-step">
+          <span>Build</span>
+          <p>Use AI to create the first working version, then shape it with clear engineering decisions.</p>
+        </div>
+        <div class="workflow-step">
+          <span>Verify</span>
+          <p>Check browser behaviour, data, security, mobile layout, forms, and deployment settings.</p>
+        </div>
+        <div class="workflow-step">
+          <span>Ship</span>
+          <p>Prepare the GitHub repository, connect Vercel, publish the site, and review the live result.</p>
+        </div>
+      </section>
+
+      <section class="principles" aria-label="Learning principles">
+        <article>
+          <span>01</span>
+          <h3>Prompt with intent</h3>
+          <p>Turn vague ideas into clear build instructions, acceptance criteria, and product behaviour.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Verify everything</h3>
+          <p>Check the browser, logs, database, security rules, and edge cases before you trust the result.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Ship in public</h3>
+          <p>Prepare projects for GitHub, Vercel, Supabase, and real users with a calm release process.</p>
+        </article>
+      </section>
+
+      <section class="section" id="tracks">
+        <div class="section-heading">
+          <p class="eyebrow">Learning tracks</p>
+          <h2>Choose the skill you want to build first.</h2>
+        </div>
+        <div class="track-switcher" role="tablist" aria-label="Learning track selector">
+          <button class="track-tab active" type="button" data-track="ai">AI Coding</button>
+          <button class="track-tab" type="button" data-track="product">Product Thinking</button>
+          <button class="track-tab" type="button" data-track="deploy">Deployment</button>
+          <button class="track-tab" type="button" data-track="security">Security</button>
+        </div>
+        <div class="track-card" id="track-card">
+          <p class="eyebrow" id="track-label">Track one</p>
+          <h3 id="track-title">AI Coding Foundations</h3>
+          <p id="track-description">
+            Learn how to direct AI tools, review generated code, spot weak assumptions, and turn an idea into a working interface.
+          </p>
+          <ul id="track-list">
+            <li>Prompt briefs that developers can actually use</li>
+            <li>Code reading for non traditional builders</li>
+            <li>Feature planning, testing, and iteration</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section labs" id="labs">
+        <div class="section-heading">
+          <p class="eyebrow">Project labs</p>
+          <h2>Practice with real build situations.</h2>
+        </div>
+        <div class="lab-grid">
+          <article>
+            <h3>Landing Page Lab</h3>
+            <p>Design a polished public page, improve SEO, and prepare it for Vercel.</p>
+          </article>
+          <article>
+            <h3>Database Lab</h3>
+            <p>Plan Supabase tables, permissions, records, and admin flows without breaking security.</p>
+          </article>
+          <article>
+            <h3>Debug Lab</h3>
+            <p>Use logs, screenshots, and browser checks to diagnose what is actually failing.</p>
+          </article>
+          <article>
+            <h3>Launch Lab</h3>
+            <p>Connect GitHub, review deployment settings, and publish a stable first version.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section outcomes" id="outcomes">
+        <div class="section-heading">
+          <p class="eyebrow">Outcomes</p>
+          <h2>What learners should be able to do.</h2>
+        </div>
+        <div class="outcome-list">
+          <article>
+            <h3>Explain the product</h3>
+            <p>Turn an idea into a clear scope, target user, feature list, and practical first release.</p>
+          </article>
+          <article>
+            <h3>Guide AI tools</h3>
+            <p>Write better build prompts, inspect the result, ask for focused fixes, and avoid blind copying.</p>
+          </article>
+          <article>
+            <h3>Check the work</h3>
+            <p>Verify forms, links, database flows, responsive layout, SEO basics, and common failure points.</p>
+          </article>
+          <article>
+            <h3>Publish with confidence</h3>
+            <p>Use GitHub and Vercel to release a working version that can be improved after feedback.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section highlights" id="highlights">
+        <div class="section-heading">
+          <p class="eyebrow">Highlights</p>
+          <h2>Built for people creating real apps.</h2>
+        </div>
+        <div class="highlight-grid">
+          <article class="highlight-main">
+            <p class="eyebrow">Featured guide</p>
+            <h3>From idea to deployed AI product</h3>
+            <p>
+              A practical walkthrough for turning a rough idea into a visible app, including structure, user flow, database planning, and Vercel launch checks.
+            </p>
+          </article>
+          <article>
+            <h3>Prompt clinic</h3>
+            <p>Improve weak AI instructions and turn them into build ready product briefs.</p>
+          </article>
+          <article>
+            <h3>Verification checklist</h3>
+            <p>Use repeatable checks before calling a feature finished.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section pricing" id="pricing">
+        <div>
+          <p class="eyebrow">Simple start</p>
+          <h2>Learn the workflow before scaling the platform.</h2>
+          <p>
+            This first version is ready as a public site. Later, it can grow into login, paid courses, user dashboards, progress tracking, and lesson videos.
+          </p>
+        </div>
+        <div class="price-card">
+          <p class="plan">Starter</p>
+          <h3>Free preview</h3>
+          <p>Public learning pages, programme outline, and waitlist form.</p>
+          <a class="primary-button full" href="#join">Start with LabiPilot</a>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq">
+        <div class="section-heading">
+          <p class="eyebrow">Questions</p>
+          <h2>Clear answers before launch.</h2>
+        </div>
+        <details>
+          <summary>Is this copied from Framis?</summary>
+          <p>No. LabiPilot uses an original name, copy, design, structure, and content. It is inspired by the broad public idea of AI engineering education, not by protected code or brand assets.</p>
+        </details>
+        <details>
+          <summary>Can this become a full learning platform?</summary>
+          <p>Yes. The next stage can add user login, lesson pages, video modules, progress tracking, payments, and an admin dashboard.</p>
+        </details>
+        <details>
+          <summary>Is it ready for Vercel?</summary>
+          <p>Yes. This version is a static site, so Vercel can deploy it directly from GitHub without environment variables.</p>
+        </details>
+      </section>
+
+      <section class="join" id="join">
+        <div>
+          <p class="eyebrow">Join the builder list</p>
+          <h2>Be first when LabiPilot opens.</h2>
+        </div>
+        <form class="join-form" name="waitlist">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" />
+          </label>
+          <button class="primary-button" type="submit">Request access</button>
+          <p class="form-note">This demo form is frontend only. Connect it to Supabase or a form provider when you are ready.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 LabiPilot. Original concept, content, and visual identity.</p>
+      <div>
+        <a href="#method">Method</a>
+        <a href="#tracks">Tracks</a>
+        <a href="#faq">FAQ</a>
+        <a href="#join">Contact</a>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

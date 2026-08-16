@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Preview the LabiPilot learner dashboard and progress path." />
+    <title>Dashboard, LabiPilot</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./pages.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="LabiPilot home"><span class="brand-mark">LP</span><span>LabiPilot</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="./dashboard.html">Dashboard</a>
+        <a href="./courses.html">Courses</a>
+        <a href="./lessons.html">Lessons</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./resources.html">Resources</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+      <a class="header-cta" href="./contact.html">Join waitlist</a>
+      <button class="menu-button" type="button" aria-label="Open menu">Menu</button>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Learner dashboard</p>
+        <h1>Track the first build path.</h1>
+        <p>This dashboard preview shows how LabiPilot can guide learners through lessons, project work, verification, and deployment checks.</p>
+      </section>
+
+      <section class="section dashboard-grid">
+        <article class="content-card metric-card">
+          <span data-dashboard-completed>0</span>
+          <p>Lessons completed on this device</p>
+        </article>
+        <article class="content-card metric-card">
+          <span>5</span>
+          <p>Core lessons in the launch path</p>
+        </article>
+        <article class="content-card metric-card">
+          <span>1</span>
+          <p>Project ready for Vercel review</p>
+        </article>
+      </section>
+
+      <section class="section progress-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Current path</p>
+          <h2>Build and Ship Apps With AI.</h2>
+        </div>
+        <div class="progress-list">
+          <article class="progress-item" data-progress-row="lesson-brief">
+            <span>01</span>
+            <div>
+              <h3>Turn an idea into a build brief</h3>
+              <p>Define the user, value, pages, data, and acceptance checks before building.</p>
+              <a class="secondary-button" href="./lesson-ai-build-brief.html">Open lesson</a>
+            </div>
+          </article>
+          <article class="progress-item">
+            <span>02</span>
+            <div>
+              <h3>Create the first interface</h3>
+              <p>Shape a clean page layout, sections, links, and responsive behaviour.</p>
+            </div>
+          </article>
+          <article class="progress-item">
+            <span>03</span>
+            <div>
+              <h3>Read the generated code</h3>
+              <p>Understand the core files and ask for precise changes.</p>
+            </div>
+          </article>
+          <article class="progress-item">
+            <span>04</span>
+            <div>
+              <h3>Add data and rules</h3>
+              <p>Plan Supabase tables, permissions, and form behaviour.</p>
+            </div>
+          </article>
+          <article class="progress-item">
+            <span>05</span>
+            <div>
+              <h3>Deploy and verify</h3>
+              <p>Push to GitHub, deploy on Vercel, and check the live site.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 LabiPilot.</p>
+      <div><a href="./courses.html">Courses</a><a href="./lessons.html">Lessons</a><a href="./contact.html">Contact</a></div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

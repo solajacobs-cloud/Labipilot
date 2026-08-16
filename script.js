@@ -62,6 +62,17 @@ const escapeHtml = (value) =>
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 
+const getWaitlistEntries = () => JSON.parse(localStorage.getItem("labipilot_waitlist") || "[]");
+
+const setText = (selector, value) => {
+  const element = document.querySelector(selector);
+  if (element) {
+    element.textContent = value;
+  }
+};
+
+const csvValue = (value) => `"${String(value || "").replaceAll('"', '""')}"`;
+
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
     const track = tracks[tab.dataset.track];
@@ -99,7 +110,7 @@ waitlistForms.forEach((form) => {
       return;
     }
 
-    const existing = JSON.parse(localStorage.getItem("labipilot_waitlist") || "[]");
+    const existing = getWaitlistEntries();
     existing.push(entry);
     localStorage.setItem("labipilot_waitlist", JSON.stringify(existing));
     const note = form.querySelector(".form-note");
@@ -113,7 +124,23 @@ waitlistForms.forEach((form) => {
 
 const waitlistTable = document.querySelector("[data-waitlist-table]");
 if (waitlistTable) {
-  const signups = JSON.parse(localStorage.getItem("labipilot_waitlist") || "[]");
+  const signups = getWaitlistEntries();
+  setText("[data-admin-total]", signups.length);
+  setText("[data-admin-source]", "Local");
+
+  if (signups.length) {
+    const latest = signups
+      .map((item) => new Date(item.createdAt).getTime())
+      .filter(Boolean)
+      .sort((a, b) => b - a)[0];
+    const days = latest ? Math.floor((Date.now() - latest) / 86400000) : 0;
+    setText("[data-admin-latest]", days);
+    setText("[data-admin-status]", `${signups.length} local signup${signups.length === 1 ? "" : "s"} found on this device.`);
+  } else {
+    setText("[data-admin-latest]", 0);
+    setText("[data-admin-status]", "No local signups yet. Add a test signup from the contact page.");
+  }
+
   waitlistTable.innerHTML = signups.length
     ? signups
         .map(
@@ -128,6 +155,30 @@ if (waitlistTable) {
         )
         .join("")
     : `<tr><td colspan="4">No local waitlist entries yet.</td></tr>`;
+}
+
+const exportWaitlistButton = document.querySelector("[data-export-waitlist]");
+if (exportWaitlistButton) {
+  exportWaitlistButton.addEventListener("click", () => {
+    const signups = getWaitlistEntries();
+    if (!signups.length) {
+      exportWaitlistButton.textContent = "Nothing to export";
+      return;
+    }
+    const rows = [
+      ["Name", "Email", "Interest", "Submitted"],
+      ...signups.map((item) => [item.name, item.email, item.interest, item.createdAt])
+    ];
+    const csv = rows.map((row) => row.map(csvValue).join(",")).join("\n");
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "labipilot-waitlist.csv";
+    link.click();
+    URL.revokeObjectURL(url);
+    exportWaitlistButton.textContent = "Exported";
+  });
 }
 
 const clearWaitlistButton = document.querySelector("[data-clear-waitlist]");

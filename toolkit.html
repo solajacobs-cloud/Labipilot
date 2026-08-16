@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LabiPilot toolkit with copy ready app building prompts and launch checklists." />
+    <title>Toolkit, LabiPilot</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./pages.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="LabiPilot home"><span class="brand-mark">LP</span><span>LabiPilot</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="./dashboard.html">Dashboard</a>
+        <a href="./courses.html">Courses</a>
+        <a href="./lessons.html">Lessons</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./resources.html">Resources</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+      <a class="header-cta" href="./contact.html">Join waitlist</a>
+      <button class="menu-button" type="button" aria-label="Open menu">Menu</button>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Toolkit</p>
+        <h1>Copy ready prompts and launch checks.</h1>
+        <p>Use these practical templates to brief AI tools, review generated work, and prepare a clean Vercel launch.</p>
+      </section>
+
+      <section class="section toolkit-grid">
+        <article class="content-card prompt-card">
+          <p class="eyebrow">Prompt</p>
+          <h3>App brief</h3>
+          <pre><code id="prompt-app-brief">Build a simple web app for:
+Target user:
+Main problem:
+First version features:
+Pages needed:
+Data to save:
+Admin actions:
+Security concerns:
+Deployment target:
+Verification checks:</code></pre>
+          <button class="secondary-button" type="button" data-copy-target="prompt-app-brief">Copy prompt</button>
+        </article>
+
+        <article class="content-card prompt-card">
+          <p class="eyebrow">Prompt</p>
+          <h3>Code review</h3>
+          <pre><code id="prompt-code-review">Review this app like a senior engineer.
+Find:
+1. broken links
+2. weak form handling
+3. mobile layout issues
+4. security risks
+5. missing empty states
+6. deployment problems
+Return fixes in priority order.</code></pre>
+          <button class="secondary-button" type="button" data-copy-target="prompt-code-review">Copy prompt</button>
+        </article>
+
+        <article class="content-card prompt-card">
+          <p class="eyebrow">Prompt</p>
+          <h3>Vercel fix</h3>
+          <pre><code id="prompt-vercel-fix">My Vercel deployment failed.
+Project type:
+Build command:
+Output directory:
+Error message:
+Recent change:
+Tell me the likely cause and the exact file or setting to fix.</code></pre>
+          <button class="secondary-button" type="button" data-copy-target="prompt-vercel-fix">Copy prompt</button>
+        </article>
+      </section>
+
+      <section class="section checklist-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Launch checklist</p>
+          <h2>Check before sharing the link.</h2>
+        </div>
+        <div class="content-grid two">
+          <article class="content-card">
+            <h3>Product checks</h3>
+            <ul>
+              <li>Homepage explains the offer clearly.</li>
+              <li>Navigation works on desktop and phone.</li>
+              <li>Forms validate required fields.</li>
+              <li>Empty states are visible where needed.</li>
+            </ul>
+          </article>
+          <article class="content-card">
+            <h3>Deployment checks</h3>
+            <ul>
+              <li>Latest GitHub commit is deployed.</li>
+              <li>Vercel production status is ready.</li>
+              <li>Sitemap uses the correct live domain.</li>
+              <li>Important pages return HTTP 200.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 LabiPilot.</p>
+      <div><a href="./dashboard.html">Dashboard</a><a href="./resources.html">Resources</a><a href="./contact.html">Contact</a></div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

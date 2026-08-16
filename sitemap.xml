@@ -6,6 +6,7 @@
     <priority>1.0</priority>
   </url>
   <url><loc>https://labipilot-lake.vercel.app/courses</loc><lastmod>2026-08-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://labipilot-lake.vercel.app/course-build-and-ship</loc><lastmod>2026-08-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://labipilot-lake.vercel.app/dashboard</loc><lastmod>2026-08-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://labipilot-lake.vercel.app/lessons</loc><lastmod>2026-08-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://labipilot-lake.vercel.app/lesson-ai-build-brief</loc><lastmod>2026-08-16</lastmod><priority>0.7</priority></url>

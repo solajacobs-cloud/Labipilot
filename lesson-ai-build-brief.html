@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LabiPilot lesson one, turn an AI app idea into a clear build brief." />
+    <title>Lesson One, Build Brief, LabiPilot</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./pages.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="LabiPilot home"><span class="brand-mark">LP</span><span>LabiPilot</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="./dashboard.html">Dashboard</a>
+        <a href="./courses.html">Courses</a>
+        <a href="./lessons.html">Lessons</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./resources.html">Resources</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+      <a class="header-cta" href="./contact.html">Join waitlist</a>
+      <button class="menu-button" type="button" aria-label="Open menu">Menu</button>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Lesson one</p>
+        <h1>Turn an idea into a build brief.</h1>
+        <p>Before asking AI to build, decide what success means. This lesson gives learners a simple structure for turning a rough idea into clear instructions.</p>
+      </section>
+
+      <section class="section lesson-layout">
+        <article class="content-card lesson-copy">
+          <p class="eyebrow">Objective</p>
+          <h2>Write the brief before the code.</h2>
+          <p>A useful AI build prompt should explain the user, the problem, the first release, the pages, the data, and the checks that prove the work is complete.</p>
+
+          <h3>Brief structure</h3>
+          <ol class="numbered-list">
+            <li>Who is the user?</li>
+            <li>What problem does the app solve?</li>
+            <li>What should the first version include?</li>
+            <li>What pages or screens are needed?</li>
+            <li>What data must be saved or displayed?</li>
+            <li>How will the result be verified?</li>
+          </ol>
+
+          <h3>Practical task</h3>
+          <p>Write a short build brief for a waitlist app. Include the homepage, contact form, admin view, and Vercel deployment check.</p>
+
+          <button class="primary-button" type="button" data-complete-lesson="lesson-brief">Mark lesson complete</button>
+          <p class="form-note" data-lesson-status>Progress is saved on this device.</p>
+        </article>
+
+        <aside class="content-card prompt-card">
+          <p class="eyebrow">Copy prompt</p>
+          <h3>Build brief prompt</h3>
+          <pre><code>I want to build a simple web app.
+User:
+Problem:
+First version:
+Pages:
+Data:
+Admin needs:
+Deployment target:
+Verification checks:</code></pre>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 LabiPilot.</p>
+      <div><a href="./dashboard.html">Dashboard</a><a href="./lessons.html">Lessons</a><a href="./contact.html">Contact</a></div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

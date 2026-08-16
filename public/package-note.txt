@@ -1,1 +1,0 @@
-This folder contains the deployed static output for Vercel when Output Directory is set to public.

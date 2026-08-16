@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LabiPilot lesson for reading generated code and requesting precise AI fixes." />
+    <title>Read Generated Code, LabiPilot</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./pages.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="LabiPilot home"><span class="brand-mark">LP</span><span>LabiPilot</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="./dashboard.html">Dashboard</a>
+        <a href="./courses.html">Courses</a>
+        <a href="./lessons.html">Lessons</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./resources.html">Resources</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+      <a class="header-cta" href="./contact.html">Join waitlist</a>
+      <button class="menu-button" type="button" aria-label="Open menu">Menu</button>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Lesson 03</p>
+        <h1>Read the generated code before changing it.</h1>
+        <p>AI can create a working first draft, but builders still need to know which files control layout, behaviour, forms, data, and deployment.</p>
+      </section>
+
+      <section class="section lesson-layout">
+        <article class="content-card lesson-copy">
+          <h2>Goal</h2>
+          <p class="lead-copy">This lesson trains learners to inspect a generated app calmly before asking for changes. The point is not to become a senior developer overnight. The point is to know where to look and how to request focused fixes.</p>
+
+          <h3>Code reading checklist</h3>
+          <ol class="numbered-list">
+            <li>Find the main page file and confirm the visible sections match the product brief.</li>
+            <li>Find the stylesheet and check spacing, colour, mobile layout, and reusable classes.</li>
+            <li>Find the script file and identify form handling, copy buttons, menus, and progress tracking.</li>
+            <li>Check links against real files or routes.</li>
+            <li>Ask for one focused fix at a time, then verify it in the browser.</li>
+          </ol>
+
+          <h3>Review prompt</h3>
+          <p class="lead-copy">Use this after AI generates or edits code. It forces the review to focus on visible product behaviour.</p>
+          <pre><code id="prompt-generated-code-review">Review this generated app before I make more changes.
+Check:
+1. which file controls the main page
+2. which file controls styling
+3. which file controls form behaviour
+4. broken links or missing pages
+5. mobile layout risks
+6. unclear or duplicated code
+7. the safest next fix
+Return findings in priority order with exact file names.</code></pre>
+          <button class="secondary-button" type="button" data-copy-target="prompt-generated-code-review">Copy prompt</button>
+        </article>
+
+        <aside class="content-card">
+          <p class="eyebrow">Progress</p>
+          <h3>Mark this lesson complete</h3>
+          <p class="lead-copy">Progress is stored in this browser preview and shown on the dashboard.</p>
+          <button class="primary-button full" type="button" data-complete-lesson="lesson-code-review">Complete lesson</button>
+          <p class="form-note" data-lesson-status>Complete the lesson after reviewing the page, stylesheet, and script file.</p>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 LabiPilot.</p>
+      <div><a href="./dashboard.html">Dashboard</a><a href="./lessons.html">Lessons</a><a href="./toolkit.html">Toolkit</a><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a><a href="./contact.html">Contact</a></div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

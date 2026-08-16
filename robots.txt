@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://labipilot.vercel.app/sitemap.xml
+Sitemap: https://labipilot-lake.vercel.app/sitemap.xml

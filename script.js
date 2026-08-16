@@ -137,3 +137,31 @@ if (clearWaitlistButton) {
     window.location.reload();
   });
 }
+
+const completedLessons = JSON.parse(localStorage.getItem("labipilot_completed_lessons") || "[]");
+const dashboardCompleted = document.querySelector("[data-dashboard-completed]");
+if (dashboardCompleted) {
+  dashboardCompleted.textContent = completedLessons.length;
+}
+
+document.querySelectorAll("[data-progress-row]").forEach((row) => {
+  if (completedLessons.includes(row.dataset.progressRow)) {
+    row.classList.add("done");
+  }
+});
+
+document.querySelectorAll("[data-complete-lesson]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const lessonId = button.dataset.completeLesson;
+    const nextLessons = completedLessons.includes(lessonId)
+      ? completedLessons
+      : [...completedLessons, lessonId];
+    localStorage.setItem("labipilot_completed_lessons", JSON.stringify(nextLessons));
+    const status = document.querySelector("[data-lesson-status]");
+    if (status) {
+      status.textContent = "Lesson complete. Open the dashboard to see your progress.";
+    }
+    button.textContent = "Lesson completed";
+    button.disabled = true;
+  });
+});

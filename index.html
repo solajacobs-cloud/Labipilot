@@ -28,7 +28,7 @@
         "@type": "EducationalOrganization",
         "name": "LabiPilot",
         "description": "AI engineering learning platform for practical builders.",
-        "url": "https://labipilot.vercel.app",
+        "url": "https://labipilot-lake.vercel.app",
         "sameAs": []
       }
     </script>
@@ -270,14 +270,14 @@
           <p class="eyebrow">Join the builder list</p>
           <h2>Be first when LabiPilot opens.</h2>
         </div>
-        <form class="join-form" name="waitlist">
+        <form class="join-form" name="waitlist" data-waitlist-form>
           <label>
             Name
-            <input type="text" name="name" placeholder="Your name" />
+            <input type="text" name="name" placeholder="Your name" required />
           </label>
           <label>
             Email
-            <input type="email" name="email" placeholder="you@example.com" />
+            <input type="email" name="email" placeholder="you@example.com" required />
           </label>
           <button class="primary-button" type="submit">Request access</button>
           <p class="form-note">This demo form is frontend only. Connect it to Supabase or a form provider when you are ready.</p>

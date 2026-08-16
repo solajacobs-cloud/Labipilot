@@ -144,6 +144,16 @@
   line-height: 1;
 }
 
+.metric-card span[data-admin-source] {
+  font-size: 32px;
+  word-break: break-word;
+}
+
+.admin-status {
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
 .progress-panel {
   padding-top: 0;
 }

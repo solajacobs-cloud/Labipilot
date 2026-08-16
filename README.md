@@ -17,7 +17,7 @@ Live site: https://labipilot-lake.vercel.app
 9. Interactive learning tracks
 10. Project labs and outcomes
 11. Local waitlist preview using browser storage
-12. Admin preview page at `/admin`
+12. Admin preview page at `/admin` with local signup metrics, CSV export, and clear action
 13. Privacy and terms pages
 14. Custom not found page at `/404.html`
 15. Supabase waitlist schema in `supabase-schema.sql`

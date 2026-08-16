@@ -52,7 +52,15 @@ const description = document.querySelector("#track-description");
 const list = document.querySelector("#track-list");
 const menuButton = document.querySelector(".menu-button");
 const nav = document.querySelector(".nav");
-const form = document.querySelector(".join-form");
+const waitlistForms = document.querySelectorAll("[data-waitlist-form]");
+
+const escapeHtml = (value) =>
+  String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
@@ -72,13 +80,60 @@ if (menuButton && nav) {
   });
 }
 
-if (form) {
+waitlistForms.forEach((form) => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+    const formData = new FormData(form);
+    const entry = {
+      name: String(formData.get("name") || "").trim(),
+      email: String(formData.get("email") || "").trim(),
+      interest: String(formData.get("interest") || "General LabiPilot waitlist").trim(),
+      createdAt: new Date().toISOString()
+    };
+
+    if (!entry.name || !entry.email) {
+      const note = form.querySelector(".form-note");
+      if (note) {
+        note.textContent = "Please add your name and email before submitting.";
+      }
+      return;
+    }
+
+    const existing = JSON.parse(localStorage.getItem("labipilot_waitlist") || "[]");
+    existing.push(entry);
+    localStorage.setItem("labipilot_waitlist", JSON.stringify(existing));
     const note = form.querySelector(".form-note");
     if (note) {
       note.textContent =
-        "Thank you. Connect this form to Supabase when you want to collect real signups.";
+        "Thank you. Your request has been saved on this device. Supabase connection is the next live data step.";
     }
+    form.reset();
+  });
+});
+
+const waitlistTable = document.querySelector("[data-waitlist-table]");
+if (waitlistTable) {
+  const signups = JSON.parse(localStorage.getItem("labipilot_waitlist") || "[]");
+  waitlistTable.innerHTML = signups.length
+    ? signups
+        .map(
+          (item) => `
+            <tr>
+              <td>${escapeHtml(item.name)}</td>
+              <td>${escapeHtml(item.email)}</td>
+              <td>${escapeHtml(item.interest)}</td>
+              <td>${escapeHtml(new Date(item.createdAt).toLocaleString())}</td>
+            </tr>
+          `
+        )
+        .join("")
+    : `<tr><td colspan="4">No local waitlist entries yet.</td></tr>`;
+}
+
+const clearWaitlistButton = document.querySelector("[data-clear-waitlist]");
+if (clearWaitlistButton) {
+  clearWaitlistButton.addEventListener("click", () => {
+    localStorage.removeItem("labipilot_waitlist");
+    window.location.reload();
   });
 }

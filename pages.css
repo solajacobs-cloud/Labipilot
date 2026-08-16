@@ -200,12 +200,33 @@
   line-height: 1.65;
 }
 
+.toolkit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.prompt-card {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+.prompt-card code {
+  white-space: pre-wrap;
+}
+
+.checklist-panel {
+  padding-top: 0;
+}
+
 @media (max-width: 900px) {
   .content-grid,
   .content-grid.two,
   .contact-panel,
   .dashboard-grid,
-  .lesson-layout {
+  .lesson-layout,
+  .toolkit-grid {
     grid-template-columns: 1fr;
   }
 }

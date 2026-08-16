@@ -18,8 +18,9 @@ Live site: https://labipilot-lake.vercel.app
 10. Local waitlist preview using browser storage
 11. Admin preview page at `/admin`
 12. Privacy and terms pages
-13. Supabase waitlist schema in `supabase-schema.sql`
-14. SEO metadata, robots file, sitemap, and social preview image
+13. Custom not found page at `/404.html`
+14. Supabase waitlist schema in `supabase-schema.sql`
+15. SEO metadata, robots file, sitemap, and social preview image
 
 ## Deploying to Vercel
 

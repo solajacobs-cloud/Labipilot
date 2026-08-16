@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LabiPilot lesson for deploying to Vercel, reading build status, and verifying live app behaviour." />
+    <title>Deploy and Verify, LabiPilot</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./pages.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="LabiPilot home"><span class="brand-mark">LP</span><span>LabiPilot</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="./dashboard.html">Dashboard</a>
+        <a href="./courses.html">Courses</a>
+        <a href="./lessons.html">Lessons</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./resources.html">Resources</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+      <a class="header-cta" href="./contact.html">Join waitlist</a>
+      <button class="menu-button" type="button" aria-label="Open menu">Menu</button>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Lesson 05</p>
+        <h1>Ship the app, then test the live link.</h1>
+        <p>A deployment is only finished when the live URL loads, key links work, forms behave as expected, and the build logs have been checked.</p>
+      </section>
+
+      <section class="section lesson-layout">
+        <article class="content-card lesson-copy">
+          <h2>Goal</h2>
+          <p class="lead-copy">Learners should be able to push a change, confirm Vercel built the right commit, and run a short production checklist before sharing the app.</p>
+
+          <h3>Launch checklist</h3>
+          <ol class="numbered-list">
+            <li>Push the final change to the connected GitHub repository.</li>
+            <li>Open Vercel and confirm the latest production deployment is ready.</li>
+            <li>Check the deployment commit message matches the change you expected.</li>
+            <li>Open the live URL and test the homepage, dashboard, lessons, forms, and footer links.</li>
+            <li>Record any failed route, console error, or unclear copy as a focused fix.</li>
+          </ol>
+
+          <h3>Verification prompt</h3>
+          <p class="lead-copy">Use this prompt after deployment to turn vague testing into a concrete release check.</p>
+          <pre><code id="prompt-deploy-verify">Create a production verification checklist for this deployed app.
+Live URL:
+Latest commit:
+Pages to test:
+Forms to test:
+Expected success messages:
+Expected navigation links:
+Mobile checks:
+SEO files to check:
+Return a pass or fail table, exact issues, and the next safest fix.</code></pre>
+          <button class="secondary-button" type="button" data-copy-target="prompt-deploy-verify">Copy prompt</button>
+        </article>
+
+        <aside class="content-card">
+          <p class="eyebrow">Progress</p>
+          <h3>Mark this lesson complete</h3>
+          <p class="lead-copy">Completion is saved locally in this preview. In production, this belongs in the LabiPilot learner database.</p>
+          <button class="primary-button full" type="button" data-complete-lesson="lesson-deploy-verify">Complete lesson</button>
+          <p class="form-note" data-lesson-status>Complete the lesson after testing the live URL and reading the Vercel deployment status.</p>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 LabiPilot.</p>
+      <div><a href="./dashboard.html">Dashboard</a><a href="./lessons.html">Lessons</a><a href="./toolkit.html">Toolkit</a><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a><a href="./contact.html">Contact</a></div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
